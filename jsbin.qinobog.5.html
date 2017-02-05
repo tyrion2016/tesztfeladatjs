@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by tyrion2016 (http://jsbin.com/qinobog/5/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="js tesztfeladat">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/B4EB6EC2-3C45-A74A-8B3F-E191D330953B/main.js" charset="UTF-8"></script><script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <title>Practice JavaScript by drawing</title>
+<style id="jsbin-css">
+moveright{
+  display: inline;
+}
+#container
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#rect {
+  position: absolute;
+  border: none;
+  width: 80px;
+  height:80px;
+  margin-top: 10px;
+  background-color: #99ccff;
+  left: 0;
+}
+</style>
+</head>
+<body>
+   
+  <button onclick="MoveLeft()"><<
+  </button>
+  <button  onclick="MoveRight()">>></button>
+  <div id="container">
+  <div id="rect"></div>
+  </div>
+  
+ 
+  
+<script id="jsbin-javascript">
+var rect=document.getElementById("rect");
+var container=document.getElementById("container");
+var rectLeft=0;
+function MoveRight (){
+  rectLeft+=100;
+  rect.style.left=rectLeft + 'px';
+}
+function MoveLeft (){ 
+  if (rectLeft==0)
+    {return;
+    }
+  rectLeft-=100;
+  rect.style.left=rectLeft + 'px';
+}
+MoveRight();
+MoveLeft();
+
+</script>
+</body>
+</html>
